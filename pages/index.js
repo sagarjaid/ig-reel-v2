@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useState, useEffect } from 'react'
@@ -128,9 +129,20 @@ const handleDownload = (e)=>{
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="google-site-verification" content="34gn5GZwsWz27cAZKc8NJkbWrysX4OapmLpwy8-3-Uw" />
       </Head>
-
+      <Script
+           id="google-analytics"
+           src="https://www.googletagmanager.com/gtag/js?id=G-10V82FHBHZ"
+           onLoad={() => {
+             window.dataLayer = window.dataLayer || [];
+             function gtag(){dataLayer.push(arguments);}
+             gtag('js', new Date());
+             gtag('config', 'YOUR-ID');
+           }}
+         />
       <main>
+        
         {/* nav */}
         <nav className='border-b'>
           <div className='py-2 px-6 sm:px-2 max-w-7xl m-auto'>
