@@ -1,16 +1,14 @@
-
 import React, { useState, useEffect } from "react";
-import { saveAs } from 'file-saver';
+import { saveAs } from "file-saver";
 
-const VideoBox = (videoLink) => {
+const Download = (videoLink) => {
   const [videoToShow, setVideoToShow] = useState("");
 
-  const handleDownload = (e)=>{
+  const handleDownload = (e) => {
     e.preventDefault();
-    console.log(videoToShow.videoLink)
-    saveAs(videoToShow.videoLink)
-    //window.open(videoToShow.videoLink, '_blank', 'noopener,noreferrer', 'download');
-  }
+    console.log(videoToShow.videoLink);
+    saveAs(videoToShow.videoLink);
+  };
 
   useEffect(() => {
     setVideoToShow(videoLink);
@@ -23,11 +21,15 @@ const VideoBox = (videoLink) => {
         type="submit"
         className="px-4 mt-4 bg-blue-600 w-full flex justify-center h-8 items-center rounded-full text-white"
         onClick={handleDownload}
-        >
-        <img className="mr-1" src="/assets/ig-downloder-logo.png" alt="reel-logo"/>
+      >
+        <img
+          className="mr-1"
+          src="/assets/ig-downloder-logo.png"
+          alt="reel-logo"
+        />
         <span className="mr-1">Download Link 1</span>
       </button>
-  </div>
+    </div>
   );
 };
-export default VideoBox
+export default Download;
