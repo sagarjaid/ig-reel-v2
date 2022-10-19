@@ -3,15 +3,17 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "postbuild": "next-sitemap"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
     "file-saver": "^2.0.5",
     "instagram-url-direct": "^1.0.12",
-    "nodemon": "^2.0.20"
+    "next": "latest",
+    "next-sitemap": "^3.1.29",
+    "nodemon": "^2.0.20",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
